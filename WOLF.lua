@@ -6893,7 +6893,7 @@ end
 end
 end
 if text == 'المبرمج يوسف' or text == 'يوسف' or text == 'المبرمج' then  
-local UserId_Info = LuaTele.searchPublicChat("Q_o_ll")
+local UserId_Info = LuaTele.searchPublicChat("php_d")
 if UserId_Info.id then
 local  ban = LuaTele.getUser(UserId_Info.id)
 local  bain = LuaTele.getUserFullInfo(UserId_Info.id)
@@ -6913,7 +6913,7 @@ local TestText = "\n ◍*𝐃𝐄𝐕 𝐍𝐀𝐌𝐄* :  [".. ban.first_name..
 keyboardd = {} 
 keyboardd.inline_keyboard = {
 {
-{text = Creat, url = "https://t.me/Q_o_ll"}
+{text = Creat, url = "https://t.me/php_d"}
 },
 }
 local msg_id = msg.id/2097152/0.5 
@@ -6923,7 +6923,7 @@ local TestText = "\n ◍*𝐃𝐄𝐕 𝐍𝐀𝐌𝐄* :  [".. ban.first_name..
 keyboardd = {} 
 keyboardd.inline_keyboard = {
 {
-{text = Creat, url = "https://t.me/Q_o_ll"}
+{text = Creat, url = "https://t.me/php_d"}
 },
 }
 local msg_id = msg.id/2097152/0.5 
@@ -6981,7 +6981,7 @@ end
 end
 
 if text == 'الزعيم' or text == 'زعيم' or text == 'مبرمج السورس' then  
-local UserId_Info = LuaTele.searchPublicChat("belalelshayal")
+local UserId_Info = LuaTele.searchPublicChat("php_d")
 if UserId_Info.id then
 local  ban = LuaTele.getUser(UserId_Info.id)
 local  bain = LuaTele.getUserFullInfo(1689744654)
@@ -6997,7 +6997,7 @@ local TestText = "  ❲ ‹ 𝚂𝙾𝚁𝚂𝚄𝙴 </> 𝚣𝚊𝚒𝚖 ›❳
 keyboardd = {} 
 keyboardd.inline_keyboard = {
 {
-{text = czczh, url = "https://t.me/belalelshayal"}
+{text = czczh, url = "https://t.me/php_d"}
 },
 }
 local msg_id = msg.id/2097152/0.5 
@@ -7007,7 +7007,7 @@ local TestText = "  ❲ ‹ 𝚂𝙾𝚁𝚂𝚄𝙴 </> 𝚣𝚊𝚒𝚖 ›❳
 keyboardd = {} 
 keyboardd.inline_keyboard = {
 {
-{text = czczh, url = "https://t.me/belalelshayal"}
+{text = czczh, url = "https://t.me/php_d"}
 },
 }
 local msg_id = msg.id/2097152/0.5 
@@ -7016,7 +7016,7 @@ end
 end
 end
 if text == 'المبرمج اشرف' or text == 'عمو اشرف' then  
-local UserId_Info = LuaTele.searchPublicChat("php14")
+local UserId_Info = LuaTele.searchPublicChat("QoooQQOO")
 if UserId_Info.id then
 local  ban = LuaTele.getUser(UserId_Info.id)
 local  bain = LuaTele.getUserFullInfo(UserId_Info.id)
