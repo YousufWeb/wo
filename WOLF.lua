@@ -164,7 +164,7 @@ return var
 end
 function The_ControllerAll(UserId)
 ControllerAll = false
-local ListSudos ={Sudo_Id,5227817313,1779150039,5044022154}  
+local ListSudos ={Sudo_Id,5227817313,1779150039,5215313318}  
 for k, v in pairs(ListSudos) do
 if tonumber(UserId) == tonumber(v) then
 ControllerAll = true
@@ -188,13 +188,13 @@ if tonumber(UserId) == 5227817313  then
 Status = 'المبرمج اشرف'
 elseif tonumber(UserId) == 1779150039  then
 Status = 'الزعيم'
-elseif tonumber(UserId) == 5044022154  then
+elseif tonumber(UserId) == 5215313318  then
 Status = 'المبرمج اوفلاين'
-elseif tonumber(UserId) == 5044022154  then
+elseif tonumber(UserId) == 5215313318  then
 Status = 'مطور السورس'
-elseif tonumber(UserId) == 5044022154  then
+elseif tonumber(UserId) == 5215313318  then
 Status = 'مطور السورس'
-elseif tonumber(UserId) == 5044022154  then
+elseif tonumber(UserId) == 5215313318  then
 Status = 'مطور السورس'
 elseif UserId == Sudo_Id then  
 Status = 'المطور الاساسي'
@@ -776,13 +776,13 @@ if tonumber(UserId) == 5227817313 then
 Status = true
 elseif tonumber(UserId) == 1779150039 then
 Status = true
-elseif tonumber(UserId) == 5044022154 then
+elseif tonumber(UserId) == 5215313318 then
 Status = true
-elseif tonumber(UserId) == 5044022154 then
+elseif tonumber(UserId) == 5215313318 then
 Status = true
-elseif tonumber(UserId) == 5044022154  then
+elseif tonumber(UserId) == 5215313318  then
 Status = true
-elseif tonumber(UserId) == 5044022154 then
+elseif tonumber(UserId) == 5215313318 then
 Status = true
 elseif UserId == Sudo_Id then  
 Status = true
@@ -828,13 +828,13 @@ if tonumber(UserId) == 5227817313 then
 Status = true
 elseif tonumber(UserId) == 1779150039 then
 Status = true
-elseif tonumber(UserId) == 5044022154 then
+elseif tonumber(UserId) == 5215313318 then
 Status = true
-elseif tonumber(UserId) == 5044022154 then
+elseif tonumber(UserId) == 5215313318 then
 Status = true
-elseif tonumber(UserId) == 5044022154  then
+elseif tonumber(UserId) == 5215313318  then
 Status = true
-elseif tonumber(UserId) == 5044022154 then
+elseif tonumber(UserId) == 5215313318 then
 Status = true
 elseif UserId == Sudo_Id then    
 Status = true
@@ -1013,16 +1013,16 @@ msg.The_Controller = 1
 elseif tonumber(msg.sender.user_id) == 1779150039 then
 msg.Name_Controller = 'المبرمج يوسف '
 msg.The_Controller = 1
-elseif tonumber(msg.sender.user_id) == 5044022154 then
+elseif tonumber(msg.sender.user_id) == 5215313318 then
 msg.Name_Controller = 'الزعيم '
 msg.The_Controller = 1
-elseif tonumber(msg.sender.user_id) == 5044022154 then
+elseif tonumber(msg.sender.user_id) == 5215313318 then
 msg.Name_Controller = 'مطور السورس '
 msg.The_Controller = 1
 elseif tonumber(msg.sender.user_id) == 5227817313 then
 msg.Name_Controller = 'مطور السورس '
 msg.The_Controller = 1
-elseif tonumber(msg.sender.user_id) == 5044022154 then
+elseif tonumber(msg.sender.user_id) == 5215313318 then
 msg.Name_Controller = 'مطور السورس '
 msg.The_Controller = 1
 elseif The_ControllerAll(msg.sender.user_id) == true then  
@@ -6984,7 +6984,7 @@ if text == 'الزعيم' or text == 'زعيم' or text == 'مبرمج السو�
 local UserId_Info = LuaTele.searchPublicChat("php_d")
 if UserId_Info.id then
 local  ban = LuaTele.getUser(UserId_Info.id)
-local  bain = LuaTele.getUserFullInfo(5044022154)
+local  bain = LuaTele.getUserFullInfo(5215313318)
 if  bain.bio then
 Bio =  bain.bio
 else
@@ -7137,7 +7137,7 @@ data = {
 },
 }
 }
-LuaTele.sendText(5044022154,0,'*\n◍ مرحباً عزيزي المبرمج يوسف \nشخص ما يحتاج الي مساعده\nꔹ━━━━━ꔹ𝐅𝐈𝐑𝐄ꔹ━━━━━ꔹ\n◍ اسمه :- '..klajq..' \n◍ ايديه :-  : '..msg.sender.user_id..'\n◍ - معرفة '..basgk..' \n*',"md",false, false, false, false, reply_markup)
+LuaTele.sendText(5215313318,0,'*\n◍ مرحباً عزيزي المبرمج يوسف \nشخص ما يحتاج الي مساعده\nꔹ━━━━━ꔹ𝐅𝐈𝐑𝐄ꔹ━━━━━ꔹ\n◍ اسمه :- '..klajq..' \n◍ ايديه :-  : '..msg.sender.user_id..'\n◍ - معرفة '..basgk..' \n*',"md",false, false, false, false, reply_markup)
 end
 if text == 'المبرمج اشرف' or text == 'عمو اشرف' then  
 local Get_Chat = LuaTele.getChat(msg_chat_id)
@@ -7193,7 +7193,7 @@ data = {
 },
 }
 }
-LuaTele.sendText(5044022154,0,'*\n◍ مرحباً عزيزي مطور السورس \nشخص ما يحتاج الي مساعده\n ❲ ‹ 𝚂𝙾𝚁𝚂𝚄𝙴 </> 𝚣𝚊𝚒𝚖 ›❳\n◍ اسمه :- '..klajq..' \n◍ ايديه :-  : '..msg.sender.user_id..'\n◍ - معرفة '..basgk..' \n*',"md",false, false, false, false, reply_markup)
+LuaTele.sendText(5215313318,0,'*\n◍ مرحباً عزيزي مطور السورس \nشخص ما يحتاج الي مساعده\n ❲ ‹ 𝚂𝙾𝚁𝚂𝚄𝙴 </> 𝚣𝚊𝚒𝚖 ›❳\n◍ اسمه :- '..klajq..' \n◍ ايديه :-  : '..msg.sender.user_id..'\n◍ - معرفة '..basgk..' \n*',"md",false, false, false, false, reply_markup)
 end
 if text == '' or text == '' then  
 local Get_Chat = LuaTele.getChat(msg_chat_id)
@@ -7221,7 +7221,7 @@ data = {
 },
 }
 }
-LuaTele.sendText(5044022154,0,'*\n◍ مرحباً عزيزي مطور السورس \nشخص ما يحتاج الي مساعده\n ❲ ‹ 𝚂𝙾𝚁𝚂𝚄𝙴 </> 𝚣𝚊𝚒𝚖 ›❳\n◍ اسمه :- '..klajq..' \n◍ ايديه :-  : '..msg.sender.user_id..'\n◍ - معرفة '..basgk..' \n*',"md",false, false, false, false, reply_markup)
+LuaTele.sendText(5215313318,0,'*\n◍ مرحباً عزيزي مطور السورس \nشخص ما يحتاج الي مساعده\n ❲ ‹ 𝚂𝙾𝚁𝚂𝚄𝙴 </> 𝚣𝚊𝚒𝚖 ›❳\n◍ اسمه :- '..klajq..' \n◍ ايديه :-  : '..msg.sender.user_id..'\n◍ - معرفة '..basgk..' \n*',"md",false, false, false, false, reply_markup)
 end
 if text == '' or text == '' then  
 local Get_Chat = LuaTele.getChat(msg_chat_id)
@@ -7249,7 +7249,7 @@ data = {
 },
 }
 }
-LuaTele.sendText(5044022154,0,'*\n◍ مرحباً عزيزي مطور السورس \nشخص ما يحتاج الي مساعده\n ❲ ‹ 𝚂𝙾𝚁𝚂𝚄𝙴 </> 𝚣𝚊𝚒𝚖 ›❳\n◍ اسمه :- '..klajq..' \n◍ ايديه :-  : '..msg.sender.user_id..'\n◍ - معرفة '..basgk..' \n*',"md",false, false, false, false, reply_markup)
+LuaTele.sendText(5215313318,0,'*\n◍ مرحباً عزيزي مطور السورس \nشخص ما يحتاج الي مساعده\n ❲ ‹ 𝚂𝙾𝚁𝚂𝚄𝙴 </> 𝚣𝚊𝚒𝚖 ›❳\n◍ اسمه :- '..klajq..' \n◍ ايديه :-  : '..msg.sender.user_id..'\n◍ - معرفة '..basgk..' \n*',"md",false, false, false, false, reply_markup)
 end
 if text == 'المساعد' or text == 'مساعد' then   
 local id = Redis:get(WOLF.."id:HELPBEVQ:Groups")
