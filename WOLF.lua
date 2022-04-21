@@ -1011,10 +1011,10 @@ if tonumber(msg.sender.user_id) == 5227817313 then
 msg.Name_Controller = 'المبرمج اشرف '
 msg.The_Controller = 1
 elseif tonumber(msg.sender.user_id) == 1779150039 then
-msg.Name_Controller = 'المبرمج يوسف '
+msg.Name_Controller = 'الزعيم '
 msg.The_Controller = 1
 elseif tonumber(msg.sender.user_id) == 5215313318 then
-msg.Name_Controller = 'الزعيم '
+msg.Name_Controller = 'المبرمج اوفلاين '
 msg.The_Controller = 1
 elseif tonumber(msg.sender.user_id) == 5215313318 then
 msg.Name_Controller = 'مطور السورس '
