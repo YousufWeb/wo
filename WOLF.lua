@@ -15242,6 +15242,9 @@ data = {
 {text = ' ❲ ‹ 𝙵𝚒𝚕𝚎𝚜 𝙱𝚘𝚝𝚂 ›❳', url = 't.me/php14'}, 
 },
 }
+{text = ' اوامر الادمنيه ', data = IdUser..'/Yo'}, {text = ' الحمايه ', data = IdUser..'Yo'}, 
+},
+}
 }
 local TextHelp = [[*
 ⋆ مــرحــبــاً بــك فــي……⋆
