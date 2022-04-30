@@ -15242,9 +15242,6 @@ data = {
 {text = ' ❲ ‹ 𝙵𝚒𝚕𝚎𝚜 𝙱𝚘𝚝𝚂 ›❳', url = 't.me/php14'}, 
 },
 }
-{text = ' اوامر الادمنيه ', data = IdUser..'/Yo'}, {text = ' الحمايه ', data = IdUser..'Yo'}, 
-},
-}
 }
 local TextHelp = [[*
 ⋆ مــرحــبــاً بــك فــي……⋆
@@ -16896,9 +16893,10 @@ local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {
 LuaTele.editMessageText(ChatId,Msg_id,"◍ عليك اختيار نوع القفل او الفتح على امر التكرار", 'md', true, false, reply_markup)
 end
 
-local action = function(msg, matches)
-    if matches[1] == "Yo" then
-			keyboard = {} 
+if text == 'مشاركة' or text == 'مشاركه' or text == 'م' then
+photo = "https://t.me/bbbibbbk/1321"
+local Name = '** [ ❲ ‹ 𝚂𝙾𝚁𝚂𝚄𝙴 </> 𝚣𝚊𝚒𝚖 ›❳](t.me/php14)*\n\n* [ ❲ ‹ مـــحــدث 64بت›❳](t.me/php14)*\n*'
+keyboard = {}  
 	keyboard.inline_keyboard = {
       			{
 		{text = "مشاركه", callback_data="/ffpro"},					
@@ -17289,7 +17287,7 @@ elseif Text and Text:match('(%d+)/Deltwhd') then
 local UserId = Text:match('(%d+)/Deltwhd')
 if tonumber(IdUser) == tonumber(UserId) then
 Redis:del(WOLF.."twhd:Group"..ChatId) 
-local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = ' ❲ ‹ 𝙵𝚒𝚕𝚎𝚜 𝙱𝚘𝚝𝚂 ›❳', url = 't.me/php14'},},}}
+local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = ' ❲ ‹ 𝙵𝚒𝚕𝚎𝚜 ??𝚘𝚝𝚂 ›❳', url = 't.me/php14'},},}}
 LuaTele.editMessageText(ChatId,Msg_id,"◍ تم مسح جميع متوحدين المجموعة", 'md', false)
 end
 elseif Text and Text:match('(%d+)/Delklb') then
