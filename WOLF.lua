@@ -16893,138 +16893,7 @@ local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {
 LuaTele.editMessageText(ChatId,Msg_id,"◍ عليك اختيار نوع القفل او الفتح على امر التكرار", 'md', true, false, reply_markup)
 end
 
-if text == 'مشاركة' or text == 'مشاركه' or text == 'م' then
-photo = "https://t.me/bbbibbbk/1321"
-local Name = '** [ ❲ ‹ 𝚂𝙾𝚁𝚂𝚄𝙴 </> 𝚣𝚊𝚒𝚖 ›❳](t.me/php14)*\n\n* [ ❲ ‹ مـــحــدث 64بت›❳](t.me/php14)*\n*'
-keyboard = {} 
-keyboard.inline_keyboard = {
-      			{
-		{text = "مشاركه", callback_data="/ffpro"},					
-			},			
-				{
-		{text = "مشاركه بشكل سري", callback_data="/ano"},					
-			},		
-			{
-		{text = "قنات البوت", url="https://t.me/php_77"},					
-			},			
-	}
-		api.sendKeyboard(msg.chat.id, 'مرحبا بك  \nماهوه رايك بقنات @php_77 \n ارسل رايك وسيتم نشره في قنات ', keyboard)      
-	end
- 	  if msg.cb then				
-    if matches[1] == 'ffpro' then
- api.editMessageText(msg.chat.id, msg.message_id, ' ارسل ماتريد الان🌐')	
-client:set('mlvvv'..msg.from.id, 'set')
- end
-	end
-	if msg.cb then				
-    if matches[1] == 'ano' then
- api.editMessageText(msg.chat.id, msg.message_id, ' ارسل ماتريد الان وسيضهر بسريه')	
-client:set('mlvvv'..msg.from.id, 'ano')
- end
-	end
- if msg.cb then				
- if matches[1] == 'yes' then
-api.editMessageText(msg.chat.id, msg.message_id, 'تم')	
- local id = matches[2]
-keyboard = {} 
-	keyboard.inline_keyboard = {		
-			{
-		{text = "قنات البوت", url="https://t.me/php_77"},					
-			},			
-	}
-		api.sendKeyboard(id, 'تم الموافقه', keyboard)   	
- local id = matches[2]
- local ch = '--1001500297281' -- ايدي قناتك
- local keko = client:get('keko'..id)
- local php_77 = client:get('php_77'..id)
- local ffpro = client:get('ffpro'..id)
-keyboard = {} 
-	keyboard.inline_keyboard = {		
-			{
-		{text = "اضغط هنا لمشاركه رايك", url='https://t.me/'..bot.username..''},					
-			},				
-			{
-		{text = ''..php_77..'', url='https://t.me/'..ffpro..''},					
-			},		
-	}
-		api.sendKeyboard(ch, keko, keyboard)   
-		end
-	end
-   if msg.cb then				
- if matches[1] == 'no' then
-api.editMessageText(msg.chat.id, msg.message_id, 'تم رفض')	
- local id = matches[2]
- api.sendMessage(id, 'تم رفض النشر من قبل المشرفين')	
- end
-	end  
-if matches[1] == 'ffpro' then return false end
-local mlvvv = client:get('mlvvv'..msg.from.id)
-if not mlvvv then return false end
-if msg.text then
-if mlvvv == 'set' then  
-	 keyboard = {}
-        keyboard.inline_keyboard = {
-			{
-				{text = "موافقه", callback_data = '/yes'..msg.from.id..''},
-       	{text = "رفض", callback_data = '/no'..msg.from.id..''},
-	    	},
-							{
-				{text = "معلومات الشخص", callback_data = '/info'},
-	    	},
-							{
-				{text = ''..msg.from.first_name..'', url = 'https://t.me/'..(msg.from.username or "no")..''},
-	    	},
-    	}
-		client:set('keko'..msg.from.id, matches[1])
-		client:set('php_77'..msg.from.id, msg.from.first_name)
-		client:set('ffpro'..msg.from.id, (msg.from.username or "php_77"))
-   	client:set('mlvvv'..msg.from.id, 'no')  
-   api.sendKeyboard(config.admin, matches[1], keyboard, true)
-   api.sendReply(msg, 'تم ارسال الطلب بنجاح انتضر حتا يتم الموافقه')
-	end
-	end
-	if matches[1] == 'ano' then return false end
-local mlvvv = client:get('mlvvv'..msg.from.id)
-if not mlvvv then return false end
-if msg.text then
-if mlvvv == 'ano' then  
-	 keyboard = {}
-        keyboard.inline_keyboard = {
-			{
-				{text = "موافقه", callback_data = '/yes'..msg.from.id..''},
-       	{text = "رفض", callback_data = '/no'..msg.from.id..''},
-	    	},
-							{
-				{text = "معلومات الشخص", callback_data = '/info'},
-	    	},
-					{
-				{text = "قام بختيار السريه", callback_data = '/hjiihy'},
-	    	},
-							{
-				{text = ''..msg.from.first_name..'', url = 'https://t.me/'..(msg.from.username or "no")..''},
-	    	},
-    	}
-		client:set('keko'..msg.from.id, matches[1])
-		client:set('php_77'..msg.from.id, 'مجهول')
-		client:set('ffpro'..msg.from.id, bot.username)
-   	client:set('mlvvv'..msg.from.id, 'no')  
-   api.sendKeyboard(config.admin, matches[1], keyboard, true)
-   api.sendReply(msg, 'تم ارسال الطلب بنجاح انتضر حتا يتم الموافقه')
-	end
-	end
-	end
-local triggers = {
-  '^/(start)',
-	'^###cb:/(ffpro)',
-	'^###cb:/(ano)',
-  '^###cb:/(yes)(.*)',
-	'^###cb:/(no)(.*)',
-	'(.*)'
-}
-return {
-  action = action,
-  triggers = triggers,
-}
+
 
 elseif Text and Text:match('(%d+)/unlock_link') then
 local UserId = Text:match('(%d+)/unlock_link')
@@ -17287,7 +17156,7 @@ elseif Text and Text:match('(%d+)/Deltwhd') then
 local UserId = Text:match('(%d+)/Deltwhd')
 if tonumber(IdUser) == tonumber(UserId) then
 Redis:del(WOLF.."twhd:Group"..ChatId) 
-local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = ' ❲ ‹ 𝙵𝚒𝚕𝚎𝚜 ????𝚝𝚂 ›❳', url = 't.me/php14'},},}}
+local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = ' ❲ ‹ 𝙵𝚒𝚕𝚎𝚜 ??𝚘𝚝𝚂 ›❳', url = 't.me/php14'},},}}
 LuaTele.editMessageText(ChatId,Msg_id,"◍ تم مسح جميع متوحدين المجموعة", 'md', false)
 end
 elseif Text and Text:match('(%d+)/Delklb') then
