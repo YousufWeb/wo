@@ -16894,7 +16894,7 @@ LuaTele.editMessageText(ChatId,Msg_id,"◍ عليك اختيار نوع القف
 end
 
 local action = function(msg, matches)
-if text == ('مشاركة') and msg.reply_to_message_id ~= 0 then
+    if matches[1] == "Yo" then
 			keyboard = {} 
 	keyboard.inline_keyboard = {
       			{
