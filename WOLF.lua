@@ -1288,7 +1288,7 @@ for k,v in pairs(msg.content.member_user_ids) do
 local Info_User = LuaTele.getUser(v) 
 print(v)
 if v == tonumber(WOLF) then
-local N = (Redis:get(WOLF.."Name:Bot") or "ولف")
+local N = (Redis:get(WOLF.."Name:Bot") or "الزعيم")
 photo = LuaTele.getUserProfilePhotos(WOLF)
 local bot = '◍  انا بوت اسمي '..N..'\n◍  وظيفتي حمايه الجروب من السبام والتفليش الخ....\n◍  لتفعيل البوت قم اضافته للمجموعتك وقم برفعه مشرف واكتب تفعيل\n'
 if photo.total_count > 0 then
@@ -2417,7 +2417,7 @@ end
 return LuaTele.sendText(msg_chat_id,msg_id,'◍ تم استرجاع {'..X..'} مجموعه \n◍ واسترجاع {'..Y..'} مشترك في البوت')
 end
 end
-if text == 'رفع نسخه ولف' and msg.reply_to_message_id ~= 0 then
+if text == 'رفع نسخه الزعيم' and msg.reply_to_message_id ~= 0 then
 if not msg.ControllerBot then 
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*◍ هاذا الامر يخص { '..Controller_Num(1)..' }* ',"md",true)  
 end
@@ -2452,7 +2452,7 @@ for k,idASAS in pairs(v.ASAS) do
 Redis:sadd(WOLF.."TheBasics:Group"..idg,idASAS)
 end;end
 end
-return LuaTele.sendText(msg_chat_id,msg_id,'◍ تم استرجاع المجموعات من نسخه ولف')
+return LuaTele.sendText(msg_chat_id,msg_id,'◍ تم استرجاع المجموعات من نسخه الزعيم')
 else
 return LuaTele.sendText(msg_chat_id,msg_id,'◍ الملف لا يدعم هاذا البوت')
 end
@@ -11792,7 +11792,7 @@ end
 if text == 'بوت' or text == 'البوت' then
 local photo = LuaTele.getUserProfilePhotos(WOLF)
 local ban = LuaTele.getUser(WOLF)
-local Namebot = (Redis:get(WOLF.."Name:Bot") or "ولف")
+local Namebot = (Redis:get(WOLF.."Name:Bot") or "الزعيم")
 local BotName = {
 'اسمي  '..Namebot..' يا قلبي 🤤💚',
 'اسمي '..Namebot..' يا روحي🙈❤️',
@@ -11808,7 +11808,7 @@ NameBots = BotName[math.random(#BotName)]
 if ban.username then
 Creator = " "..ban.first_name.." "
 else
-Creator = " ولف\n"
+Creator = " الزعيم\n"
 end
 local texxtt = ''..NameBots..''
 if photo.total_count > 0 then
@@ -11825,10 +11825,10 @@ local msgg = msg_id/2097152/0.5
 https.request("https://api.telegram.org/bot"..Token.."/sendphoto?chat_id=" .. msg_chat_id .. "&photo="..photo.photos[1].sizes[#photo.photos[1].sizes].photo.remote.id.."&caption=".. URL.escape(NameBots).."&reply_to_message_id="..msgg.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 end
-if text == (Redis:get(WOLF.."Name:Bot") or "ولف") then
+if text == (Redis:get(WOLF.."Name:Bot") or "الزعيم") then
 local photo = LuaTele.getUserProfilePhotos(WOLF)
 local ban = LuaTele.getUser(WOLF)
-local Namebot = (Redis:get(WOLF.."Name:Bot") or "ولف")
+local Namebot = (Redis:get(WOLF.."Name:Bot") or "الزعيم")
 local BotName = {
 'اسمي  '..Namebot..' يا قلبي 🤤💚',
 'اسمي '..Namebot..' يا روحي🙈❤️',
@@ -11844,7 +11844,7 @@ NameBots = BotName[math.random(#BotName)]
 if ban.username then
 Creator = " "..ban.first_name.." "
 else
-Creator = " ولف\n"
+Creator = " الزعيم\n"
 end
 local texxtt = ''..NameBots..''
 if photo.total_count > 0 then
@@ -12130,7 +12130,7 @@ local texting = {"اخر افلام شاهدتها",
 "اخر اغنية سمعتها ?", 
 "تكلم عن نفسك", 
 "ليه انت مش سالك", 
-"ما هيا عيوب سورس ولف ؟ ", 
+"ما هيا عيوب سورس الزعيم ؟ ", 
 "اخر كتاب قرآته", 
 "روايتك المفضله ?", 
 "اخر اكله اكلتها", 
@@ -12147,13 +12147,13 @@ local texting = {"اخر افلام شاهدتها",
 " ما السيء في هذه الحياة ؟ ", 
 "أجمل شيء حصل معك خلال هذا الاسبوع ؟ ", 
 "سؤال ينرفزك ؟ ", 
-" هل يعجبك سورس ولف ؟؟ ", 
+" هل يعجبك سورس الزعيم ؟؟ ", 
 " اكثر ممثل تحبه ؟ ", 
 "قد تخيلت شي في بالك وصار ؟ ", 
 "شيء عندك اهم من الناس ؟ ", 
 "تفضّل النقاش الطويل او تحب الاختصار ؟ ", 
 "وش أخر شي ضيعته؟ ", 
-"اي رايك في سورس ولف ؟ ", 
+"اي رايك في سورس الزعيم ؟ ", 
 "كم مره حبيت؟ ", 
 " اكثر المتابعين عندك باي برنامج؟", 
 " نسبه الندم عندك للي وثقت فيهم ؟", 
@@ -12933,7 +12933,7 @@ end
 if text == "معاني" then
 if Redis:get(WOLF.."Status:Games"..msg.chat_id) then
 Redis:del(WOLF.."Set:Maany"..msg.chat_id)
-Maany_Rand = {"قرد","دجاجه","بطريق","ضفدع","بومه","نحله","ديك","جمل","بقره","دولفين","تمساح","قرش","نمر","اخطبوط","سمكه","خفاش","اسد","فأر","ذئب","فراشه","عقرب","زرافه","قنفذ","تفاحه","باذنجان"}
+Maany_Rand = {"قرد","دجاجه","بطريق","ضفدع","بومه","نحله","ديك","جمل","بقره","دالزعيمين","تمساح","قرش","نمر","اخطبوط","سمكه","خفاش","اسد","فأر","ذئب","فراشه","عقرب","زرافه","قنفذ","تفاحه","باذنجان"}
 name = Maany_Rand[math.random(#Maany_Rand)]
 Redis:set(WOLF.."Game:Meaningof"..msg.chat_id,name)
 name = string.gsub(name,"قرد","🐒")
@@ -12945,7 +12945,7 @@ name = string.gsub(name,"نحله","🐝")
 name = string.gsub(name,"ديك","🐓")
 name = string.gsub(name,"جمل","🐫")
 name = string.gsub(name,"بقره","🐄")
-name = string.gsub(name,"دولفين","🐬")
+name = string.gsub(name,"دالزعيمين","🐬")
 name = string.gsub(name,"تمساح","🐊")
 name = string.gsub(name,"قرش","🦈")
 name = string.gsub(name,"نمر","🐅")
@@ -13233,7 +13233,7 @@ baniusername = '*['..bain.first_name..'](tg://user?id='..bain.id..')*'
 else
 baniusername = 'لا يوجد'
 end
-local CmdStart = '*\n◍ أهلآ بك في بوت '..(Redis:get(WOLF.."Name:Bot") or "ولف")..
+local CmdStart = '*\n◍ أهلآ بك في بوت '..(Redis:get(WOLF.."Name:Bot") or "الزعيم")..
 '\n◍ اختصاص البوت حماية المجموعات'..
 '\n◍ لتفعيل البوت عليك اتباع مايلي ...'..
 '\n◍ اضف البوت الى مجموعتك'..
@@ -14606,7 +14606,7 @@ local texting = {"اخر افلام شاهدتها",
 "اخر اغنية سمعتها ?", 
 "تكلم عن نفسك", 
 "ليه انت مش سالك", 
-"ما هيا عيوب سورس ولف ؟ ", 
+"ما هيا عيوب سورس الزعيم ؟ ", 
 "اخر كتاب قرآته", 
 "روايتك المفضله ?", 
 "اخر اكله اكلتها", 
@@ -14622,13 +14622,13 @@ local texting = {"اخر افلام شاهدتها",
 " ما السيء في هذه الحياة ؟ ", 
 "أجمل شيء حصل معك خلال هذا الاسبوع ؟ ", 
 "سؤال ينرفزك ؟ ", 
-" هل يعجبك سورس ولف ؟؟ ", 
+" هل يعجبك سورس الزعيم ؟؟ ", 
 " اكثر ممثل تحبه ؟ ", 
 "قد تخيلت شي في بالك وصار ؟ ", 
 "شيء عندك اهم من الناس ؟ ", 
 "تفضّل النقاش الطويل او تحب الاختصار ؟ ", 
 "وش أخر شي ضيعته؟ ", 
-"اي رايك في سورس ولف ؟ ", 
+"اي رايك في سورس الزعيم ؟ ", 
 "كم مره حبيت؟ ", 
 " اكثر المتابعين عندك باي برنامج؟", 
 " نسبه الندم عندك للي وثقت فيهم ؟", 
@@ -15144,7 +15144,7 @@ data = {
 }
 }
 local TextHelp = [[*
-• أهلا بك في قائمة العاب سورس ولف اختر نوع الالعاب 
+• أهلا بك في قائمة العاب سورس الزعيم اختر نوع الالعاب 
 *]]
 LuaTele.editMessageText(ChatId,Msg_id,TextHelp, 'md', true, false, reply_markup)
 end
@@ -15184,7 +15184,7 @@ data = {
 }
 }
 local TextHelp = [[*
-• مرحبا بك في الالعاب المتطورة الخاص بسورس ولف 
+• مرحبا بك في الالعاب المتطورة الخاص بسورس الزعيم 
 • اختر اللعبه ثم اختار المحادثة التي تريد اللعب بها
 *]]
 LuaTele.editMessageText(ChatId,Msg_id,TextHelp, 'md', true, false, reply_markup)
@@ -16893,7 +16893,137 @@ local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {
 LuaTele.editMessageText(ChatId,Msg_id,"◍ عليك اختيار نوع القفل او الفتح على امر التكرار", 'md', true, false, reply_markup)
 end
 
-
+local action = function(msg, matches)
+    if matches[1] == "مشاركة" then
+			keyboard = {} 
+	keyboard.inline_keyboard = {
+      			{
+		{text = "مشاركه", callback_data="/ffpro"},					
+			},			
+				{
+		{text = "مشاركه بشكل سري", callback_data="/ano"},					
+			},		
+			{
+		{text = "قنات البوت", url="https://t.me/php_77"},					
+			},			
+	}
+		api.sendKeyboard(msg.chat.id, 'مرحبا بك  \nماهوه رايك بقنات @php_77 \n ارسل رايك وسيتم نشره في قنات ', keyboard)      
+	end
+ 	  if msg.cb then				
+    if matches[1] == 'ffpro' then
+ api.editMessageText(msg.chat.id, msg.message_id, ' ارسل ماتريد الان🌐')	
+client:set('mlvvv'..msg.from.id, 'set')
+ end
+	end
+	if msg.cb then				
+    if matches[1] == 'ano' then
+ api.editMessageText(msg.chat.id, msg.message_id, ' ارسل ماتريد الان وسيضهر بسريه')	
+client:set('mlvvv'..msg.from.id, 'ano')
+ end
+	end
+ if msg.cb then				
+ if matches[1] == 'yes' then
+api.editMessageText(msg.chat.id, msg.message_id, 'تم')	
+ local id = matches[2]
+keyboard = {} 
+	keyboard.inline_keyboard = {		
+			{
+		{text = "قنات البوت", url="https://t.me/php_77"},					
+			},			
+	}
+		api.sendKeyboard(id, 'تم الموافقه', keyboard)   	
+ local id = matches[2]
+ local ch = '--1001500297281' -- ايدي قناتك
+ local keko = client:get('keko'..id)
+ local php_77 = client:get('php_77'..id)
+ local ffpro = client:get('ffpro'..id)
+keyboard = {} 
+	keyboard.inline_keyboard = {		
+			{
+		{text = "اضغط هنا لمشاركه رايك", url='https://t.me/'..bot.username..''},					
+			},				
+			{
+		{text = ''..php_77..'', url='https://t.me/'..ffpro..''},					
+			},		
+	}
+		api.sendKeyboard(ch, keko, keyboard)   
+		end
+	end
+   if msg.cb then				
+ if matches[1] == 'no' then
+api.editMessageText(msg.chat.id, msg.message_id, 'تم رفض')	
+ local id = matches[2]
+ api.sendMessage(id, 'تم رفض النشر من قبل المشرفين')	
+ end
+	end  
+if matches[1] == 'ffpro' then return false end
+local mlvvv = client:get('mlvvv'..msg.from.id)
+if not mlvvv then return false end
+if msg.text then
+if mlvvv == 'set' then  
+	 keyboard = {}
+        keyboard.inline_keyboard = {
+			{
+				{text = "موافقه", callback_data = '/yes'..msg.from.id..''},
+       	{text = "رفض", callback_data = '/no'..msg.from.id..''},
+	    	},
+							{
+				{text = "معلومات الشخص", callback_data = '/info'},
+	    	},
+							{
+				{text = ''..msg.from.first_name..'', url = 'https://t.me/'..(msg.from.username or "no")..''},
+	    	},
+    	}
+		client:set('keko'..msg.from.id, matches[1])
+		client:set('php_77'..msg.from.id, msg.from.first_name)
+		client:set('ffpro'..msg.from.id, (msg.from.username or "php_77"))
+   	client:set('mlvvv'..msg.from.id, 'no')  
+   api.sendKeyboard(config.admin, matches[1], keyboard, true)
+   api.sendReply(msg, 'تم ارسال الطلب بنجاح انتضر حتا يتم الموافقه')
+	end
+	end
+	if matches[1] == 'ano' then return false end
+local mlvvv = client:get('mlvvv'..msg.from.id)
+if not mlvvv then return false end
+if msg.text then
+if mlvvv == 'ano' then  
+	 keyboard = {}
+        keyboard.inline_keyboard = {
+			{
+				{text = "موافقه", callback_data = '/yes'..msg.from.id..''},
+       	{text = "رفض", callback_data = '/no'..msg.from.id..''},
+	    	},
+							{
+				{text = "معلومات الشخص", callback_data = '/info'},
+	    	},
+					{
+				{text = "قام بختيار السريه", callback_data = '/hjiihy'},
+	    	},
+							{
+				{text = ''..msg.from.first_name..'', url = 'https://t.me/'..(msg.from.username or "no")..''},
+	    	},
+    	}
+		client:set('keko'..msg.from.id, matches[1])
+		client:set('php_77'..msg.from.id, 'مجهول')
+		client:set('ffpro'..msg.from.id, bot.username)
+   	client:set('mlvvv'..msg.from.id, 'no')  
+   api.sendKeyboard(config.admin, matches[1], keyboard, true)
+   api.sendReply(msg, 'تم ارسال الطلب بنجاح انتضر حتا يتم الموافقه')
+	end
+	end
+	end
+local triggers = {
+  '^/(start)',
+	'^###cb:/(ffpro)',
+	'^###cb:/(ano)',
+  '^###cb:/(yes)(.*)',
+	'^###cb:/(no)(.*)',
+	'(.*)'
+}
+return {
+  action = action,
+  triggers = triggers,
+}
 
 elseif Text and Text:match('(%d+)/unlock_link') then
 local UserId = Text:match('(%d+)/unlock_link')
